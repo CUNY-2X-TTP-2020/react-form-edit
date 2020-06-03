@@ -9,7 +9,8 @@ export default class NameForm extends Component
         this.state =
         {
             fname: props.fname !== undefined ? props.fname : "John",
-            lname: props.lname !== undefined ? props.lname : "Doe"
+            lname: props.lname !== undefined ? props.lname : "Doe",
+            editable: false
         }
     }
 
@@ -19,14 +20,14 @@ export default class NameForm extends Component
             <>
                 <form>
                     <label for="fname">First Name: </label>
-                    {this.state.fname}
-                    {/* <input type="text" id="fname" /> */}
+                    {this.state.editable ? <input type="text" id="fname" /> : this.state.fname}
                     <br/>
+
                     <label for="lname">Last Name: </label>
-                    {this.state.lname}
-                    {/* <input type="text" id="lname" /> */}
+                    {this.state.editable ? <input type="text" id="lname" /> : this.state.lname}
                     <br/>
-                    <input type="submit" value="Submit" />
+
+                    <input type="submit" value="Edit" />
                 </form>
             </>
         );
