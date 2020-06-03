@@ -14,3 +14,50 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+
+button
+{
+    background-color: darkcyan;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: calc(10px + 1vmin);
+    padding: 10px;
+    margin: 20px 10px;
+}
+
+button:hover
+{
+    background-color: lightseagreen;
+}
+
+button:active
+{
+    position: relative;
+    top: 2px;
+}
+
+button:active,
+button:focus
+{
+    outline: none;
+}
+
+input[type=text]
+{
+    padding: 10px;
+    border: medium solid #282c34;
+    border-radius: 10px;
+}
+
+input[type=text]:focus
+{
+    position: relative;
+    border: medium solid lightgreen;
+}
+
+input[type=text]:active,
+input[type=text]:focus
+{
+    outline: none;
+}
