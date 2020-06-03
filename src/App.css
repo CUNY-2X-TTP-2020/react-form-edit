@@ -42,3 +42,22 @@ button:focus
 {
     outline: none;
 }
+
+input[type=text]
+{
+    padding: 10px;
+    border: medium solid #282c34;
+    border-radius: 10px;
+}
+
+input[type=text]:focus
+{
+    position: relative;
+    border: medium solid lightgreen;
+}
+
+input[type=text]:active,
+input[type=text]:focus
+{
+    outline: none;
+}
