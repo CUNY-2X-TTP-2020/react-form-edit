@@ -19,10 +19,12 @@ export default class NameForm extends Component
             <>
                 <form>
                     <label for="fname">First Name: </label>
-                    <input type="text" id="fname" />
+                    {this.state.fname}
+                    {/* <input type="text" id="fname" /> */}
                     <br/>
                     <label for="lname">Last Name: </label>
-                    <input type="text" id="lname" />
+                    {this.state.lname}
+                    {/* <input type="text" id="lname" /> */}
                     <br/>
                     <input type="submit" value="Submit" />
                 </form>
