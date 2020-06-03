@@ -40,11 +40,11 @@ export default class NameForm extends Component
                 this.state.showInputs ?
                 (
                     <form onSubmit={this.handleSubmit}>
-                        <label for="fname">First Name: </label>
+                        <div>First Name</div>
                         <input type="text" name="fname" id="fname" placeholder={this.state.fname} />
-                        <br/>
+                        <br/><br/>
 
-                        <label for="lname">Last Name: </label>
+                        <div>Last Name</div>
                         <input type="text" name="lname" id="lname" placeholder={this.state.lname} />
                         <br/>
                         
