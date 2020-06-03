@@ -41,11 +41,11 @@ export default class NameForm extends Component
                 (
                     <form onSubmit={this.handleSubmit}>
                         <label for="fname">First Name: </label>
-                        <input type="text" name="fname" id="fname" />
+                        <input type="text" name="fname" id="fname" placeholder={this.state.fname} />
                         <br/>
 
                         <label for="lname">Last Name: </label>
-                        <input type="text" name="lname" id="lname" />
+                        <input type="text" name="lname" id="lname" placeholder={this.state.lname} />
                         <br/>
                         
                         <button type="submit">Save</button> 
