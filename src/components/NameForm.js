@@ -6,6 +6,11 @@ export default class NameForm extends Component
     constructor(props)
     {
         super(props);
+        this.state =
+        {
+            fname: props.fname !== undefined ? props.fname : "John",
+            lname: props.lname !== undefined ? props.lname : "Doe"
+        }
     }
 
     render()
@@ -28,5 +33,6 @@ export default class NameForm extends Component
 
 NameForm.propTypes =
 {
-
+    fname: PropTypes.string.isRequired,
+    lname: PropTypes.string.isRequired
 }
