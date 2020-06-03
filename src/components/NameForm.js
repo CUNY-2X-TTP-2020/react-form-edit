@@ -35,6 +35,6 @@ export default class NameForm extends Component
 
 NameForm.propTypes =
 {
-    fname: PropTypes.string.isRequired,
-    lname: PropTypes.string.isRequired
+    fname: PropTypes.string,
+    lname: PropTypes.string
 }
