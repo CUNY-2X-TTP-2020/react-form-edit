@@ -1,14 +1,17 @@
-import React, { Component } from "react";
-//import NamesDisplay from "./components/NamesDisplay";
+import React from "react";
 import NameForm from "./components/NameForm";
 import "./App.css";
 
-class App extends Component {
-  render() {
+function App()
+{
     return (
-      <NameForm />
+        <div className="App">
+            <header className="App-header">
+                <h1>Form Edit</h1>
+                <NameForm fname="Random" lname="Dude" />
+            </header>
+        </div>
     );
-  }
 }
 
 export default App;

@@ -1,76 +1,71 @@
-import React, {Component} from "react"
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-class NameForm extends Component{
-    constructor(props){
+export default class NameForm extends Component
+{
+    constructor(props)
+    {
         super(props)
-        this.state = {
-            Fname: "zhongcai",
-            Lname: "jiang",
-            show:false,
-        }
+        this.state = 
+        {
+            fname: props.fname !== undefined ? props.fname : "John",
+            lname: props.lname !== undefined ? props.lname : "Doe",
+            showInputs: false,
+        };
     }
-    // handleChange=(event)=>{
-    //     this.setState({name:event.target.value})
-    // }
-    handleSubmit = (event) => {
-    
-      event.preventDefault();
-      console.log("1212")
-      //this.props.onSubmit(this.state.Lname);
-       this.setState({
-        Fname:event.target.firstname.value,
-        Lname:event.target.lastname.value,
-        show:false,
-      })
-      
-    };
-    showchange=() => {
-      this.state.show?
-      this.setState({show:false})
-      :this.setState({show:true})
-    };
-    render() {
-        return (
-          <div>
 
+    handleSubmit = (event) =>
+    {
+        // event.preventDefault();
+
+        this.setState(
+        {
+            fname: event.target.fname.value,
+            lname: event.target.lname.value,
+            showInputs: false,
+        });
+    };
+
+    changeView = () =>
+    {
+        this.state.showInputs ? this.setState({ showInputs: false }) : this.setState({ showInputs: true });
+    };
+
+    render() 
+    {
+        return (
+            <div>
             {
-              this.state.show?
-              (
-                 <form onSubmit={this.handleSubmit}>
-                 <div>Lastname</div>
-                  <input
-                    type="text"
-                    name="lastname"
-                  //onChange={this.handleChange}
-                   // value={this.state.Lname}
-                  >
-                  </input>
-                 <div>Firstname</div>
-                  <input
-                  type="text"
-                  name="firstname"
-                   //onChange={this.handleChange}
-                   //value={this.state.Fname}
-                  >
-                </input>
-                <button type="submit">save</button> 
-                <button  onClick={this.showchange}>cancel</button>
-                </form>
+                this.state.showInputs ?
+                (
+                    <form onSubmit={this.handleSubmit}>
+                        <label for="fname">First Name: </label>
+                        <input type="text" name="fname" id="fname" />
+                        <br/>
+
+                        <label for="lname">Last Name: </label>
+                        <input type="text" name="lname" id="lname" />
+                        <br/>
                         
-              ):(
-                <div>
-                <div>Lastname: {this.state.Lname}</div>
-                <div>Firstname: {this.state.Fname}</div>
-                <button onClick={this.showchange}>edit</button>
-                </div>
-                
-              )
- 
+                        <button type="submit">Save</button> 
+                        <button onClick={this.changeView}>Cancel</button>
+                    </form>
+                ):
+                (
+                    <div>
+                        <div>First Name: {this.state.fname}</div>
+                        <div>Last Name: {this.state.lname}</div>
+                        <button onClick={this.changeView}>Edit</button>
+                    </div>
+                )
             }
-            
-          </div>
+            </div>
         );
-      }
-    
+    }
 }
-export default NameForm;
+
+NameForm.propTypes =
+{
+    fname: PropTypes.string,
+    lname: PropTypes.string
+}
