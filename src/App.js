@@ -1,15 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+//import NamesDisplay from "./components/NamesDisplay";
+import NameForm from "./components/NameForm";
+import "./App.css";
 
-function App() 
-{
+class App extends Component {
+  render() {
     return (
-        <div className="App">
-            <header className="App-header">
-                
-            </header>
-        </div>
+      <NameForm />
     );
+  }
 }
 
 export default App;
