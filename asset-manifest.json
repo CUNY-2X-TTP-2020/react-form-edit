@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-form-edit/static/css/main.f7e3c14c.chunk.css",
+    "main.js": "/react-form-edit/static/js/main.f24582b7.chunk.js",
+    "main.js.map": "/react-form-edit/static/js/main.f24582b7.chunk.js.map",
+    "runtime-main.js": "/react-form-edit/static/js/runtime-main.e600dd64.js",
+    "runtime-main.js.map": "/react-form-edit/static/js/runtime-main.e600dd64.js.map",
+    "static/js/2.44b5a116.chunk.js": "/react-form-edit/static/js/2.44b5a116.chunk.js",
+    "static/js/2.44b5a116.chunk.js.map": "/react-form-edit/static/js/2.44b5a116.chunk.js.map",
+    "index.html": "/react-form-edit/index.html",
+    "precache-manifest.5dc42f19eab07bf636def445d9dc4d1a.js": "/react-form-edit/precache-manifest.5dc42f19eab07bf636def445d9dc4d1a.js",
+    "service-worker.js": "/react-form-edit/service-worker.js",
+    "static/css/main.f7e3c14c.chunk.css.map": "/react-form-edit/static/css/main.f7e3c14c.chunk.css.map",
+    "static/js/2.44b5a116.chunk.js.LICENSE.txt": "/react-form-edit/static/js/2.44b5a116.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e600dd64.js",
+    "static/js/2.44b5a116.chunk.js",
+    "static/css/main.f7e3c14c.chunk.css",
+    "static/js/main.f24582b7.chunk.js"
+  ]
+}
