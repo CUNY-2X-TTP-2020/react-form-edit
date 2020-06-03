@@ -6,48 +6,69 @@ class NameForm extends Component{
         this.state = {
             Fname: "zhongcai",
             Lname: "jiang",
+            show:false,
         }
     }
-    handleChange=(event)=>{
-        this.setState({name:event.target.value})
-    }
+    // handleChange=(event)=>{
+    //     this.setState({name:event.target.value})
+    // }
     handleSubmit = (event) => {
+    
       event.preventDefault();
+      console.log("1212")
       //this.props.onSubmit(this.state.Lname);
        this.setState({
         Fname:event.target.firstname.value,
-        Lname:event.target.lastname.value
+        Lname:event.target.lastname.value,
+        show:false,
       })
+      
+    };
+    showchange=() => {
+      this.state.show?
+      this.setState({show:false})
+      :this.setState({show:true})
     };
     render() {
         return (
-          <>
-          
-            <div>Lastname: {this.state.Lname}</div>
-            <div>Firstname: {this.state.Fname}</div>
-            <button >edit</button>
-          <form onSubmit={this.handleSubmit}>
-             <input
-               type="text"
-               name="lastname"
-               onChange={this.handleChange}
-              // value={this.state.Lname}
-             >
+          <div>
 
-             </input>
-          
-             <input
-             type="text"
-             name="firstname"
-              onChange={this.handleChange}
-              //value={this.state.Fname}
-             >
-
-           </input>
-
-         
-           </form>
-          </>
+            {
+              this.state.show?
+              (
+                 <form onSubmit={this.handleSubmit}>
+                 <div>Lastname</div>
+                  <input
+                    type="text"
+                    name="lastname"
+                  //onChange={this.handleChange}
+                   // value={this.state.Lname}
+                  >
+                  </input>
+                 <div>Firstname</div>
+                  <input
+                  type="text"
+                  name="firstname"
+                   //onChange={this.handleChange}
+                   //value={this.state.Fname}
+                  >
+                </input>
+                <button type="submit">save</button> 
+                <button  onClick={this.showchange}>cancel</button>
+                </form>
+                        
+              ):(
+                <div>
+                <div>Lastname: {this.state.Lname}</div>
+                <div>Firstname: {this.state.Fname}</div>
+                <button onClick={this.showchange}>edit</button>
+                </div>
+                
+              )
+ 
+            }
+            
+          </div>
         );
       }
     
