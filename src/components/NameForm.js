@@ -16,7 +16,8 @@ export default class NameForm extends Component
 
     handleSubmit = (event) =>
     {
-        // event.preventDefault();
+        // Prevent browser reload/refresh
+        event.preventDefault();
 
         this.setState(
         {
